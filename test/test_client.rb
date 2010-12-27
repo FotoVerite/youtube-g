@@ -240,6 +240,8 @@ class TestClient < Test::Unit::TestCase
       assert_valid_url video.video_id
       assert_instance_of Fixnum, video.view_count
       assert_instance_of Fixnum, video.favorite_count
+      assert_instance_of Fixnum, video.comment_count
+      
 
       # validate author
       assert_instance_of YouTubeG::Model::Author, video.author
